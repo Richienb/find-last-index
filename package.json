@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "find-last-index",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Like Array#findIndex but searches the array backwards.",
+	"repository": "https://github.com/Richienb/find-last-index.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,7 +17,12 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
+	"keywords": [
+		"array",
+		"index",
+		"find",
+		"method"
+	],
 	"dependencies": {},
 	"devDependencies": {
 		"ava": "^3.11.1",

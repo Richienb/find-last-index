@@ -1,9 +1,21 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") {
-		throw new TypeError(`Expected a string, got ${typeof input}`)
+module.exports = (array, predicate) => {
+	if (!Array.isArray(array)) {
+		throw new TypeError(`Expected an array, got ${typeof array}`)
 	}
 
-	return `${input} & ${postfix}`
+	if (typeof predicate !== "function") {
+		throw new TypeError(`Expected a function, got ${typeof predicate}`)
+	}
+
+	let index = array.length
+
+	while (index--) {
+		if (predicate(array[index], index, array)) {
+			return index
+		}
+	}
+
+	return -1
 }

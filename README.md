@@ -1,41 +1,36 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# find-last-index [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/find-last-index/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/find-last-index)
 
-My awesome module.
+Like Array#findIndex but searches the array backwards.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/find-last-index.png)](https://npmjs.com/package/find-last-index)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install find-last-index
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const findLastIndex = require("find-last-index");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+findLastIndex(["a", "b", "bba", "cc", "d"], value => value.includes("a"));
+//=> 2
 ```
 
 ## API
 
-### theModule(input, options?)
+### findLastIndex(array, predicate)
 
-#### input
+#### array
 
-Type: `string`
+Type: `array`
 
-Lorem ipsum.
+The array to search.
 
-#### options
+#### predicate
 
-Type: `object`
+Type: `(item, index, array) => boolean`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The predicate function to call on each item.
