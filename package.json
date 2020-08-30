@@ -1,6 +1,6 @@
 {
 	"name": "find-last-index",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Like Array#findIndex but searches the array backwards.",
 	"repository": "https://github.com/Richienb/find-last-index.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
